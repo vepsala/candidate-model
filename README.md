@@ -2,6 +2,11 @@
 
 The presented candidate model uses individual candidate characteristics and historical data to predict election results.
 
+## Notes
+
+- Please note that the setup uses a fixed random seed. The impact of randomly assigned seeds has not been thoroughly analysed, but while testing with roughly 1,000 different seed values, I noticed that the number of correctly predicted candidates fluctuated between 140 and 160.
+- Subsequently, a potential improvement would be to incorporate formal prediction intervals. Instead of point predictions, future iterations could use bootstrapping or ensemble modeling (running across multiple seeds) to generate a probability distribution for each candidate. This would move beyond a static "winner list" to provide a coverage metric and communicate the probabilistic likelihood of election for each candidate.
+
 ## Requirements
 
 - **Python**: 3.10 or higher (tested with Python 3.13.5)
@@ -56,3 +61,7 @@ This repository contains:
 - **Training data** - Historical candidate and election data used for model development
 - **Candidate information** - Comprehensive dataset of candidate characteristics, names of candidates removed
 - **Data generation documentation** - Process documentation for data preparation
+
+## Feedback & Issues
+
+Please don't hesitate to reach out if you find any problems or mistakes in the code or manuscript. My contact information is available in the published manuscript.
